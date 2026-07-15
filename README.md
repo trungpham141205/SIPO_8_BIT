@@ -1,4 +1,15 @@
-# 8-bit Serial-In/Parallel-Out Shift Register
+<div align="center">
+  <h1>➡️ 8-bit SIPO Shift Register</h1>
+  <p><strong>Structural sequential RTL with functional and timing-check simulation scenarios</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/HDL-SystemVerilog-F97316?style=for-the-badge" alt="SystemVerilog" />
+    <img src="https://img.shields.io/badge/Design-Sequential-8B5CF6?style=for-the-badge" alt="Sequential design" />
+    <img src="https://img.shields.io/badge/Timing-Specify%20Checks-EC4899?style=for-the-badge" alt="Specify timing checks" />
+    <img src="https://img.shields.io/badge/Verification-2%20Scenarios-22C55E?style=for-the-badge" alt="Two verification scenarios" />
+  </p>
+</div>
+
+---
 
 An 8-bit SIPO shift register built structurally from eight D flip-flops. The flip-flop model includes a `specify` block for clock-to-Q delay and setup, hold, recovery and removal checks.
 
@@ -101,4 +112,3 @@ vsim -c -t 1ps work.sipo8bit_tb_violation -do "run -all; quit -f"
 - There is no shift enable; the register shifts on every rising edge outside reset.
 - There is no `valid` or word-complete indication.
 - Timing values are educational model values, not extracted delays from a characterized cell library.
-
